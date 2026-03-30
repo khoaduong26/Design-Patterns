@@ -1,5 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        LightSwitch light = new LightSwitch();
+        light.press(); // bật
+        light.press(); // tắt
+        light.press(); // bật
     }
 }
