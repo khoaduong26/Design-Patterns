@@ -1,6 +1,12 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        System.out.println("This is a Java application.");
+        Account account = new Account("khoa");
+
+        Command openAccount = new OpenAccount(account);
+        Command closeAccount = new CloseAccount(account);
+        Bank bank = new Bank(openAccount, closeAccount);
+
+        bank.ClickOpen();
+        bank.ClickClose();
     }
 }
