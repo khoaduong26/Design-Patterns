@@ -5,7 +5,7 @@ public class VideoProxy implements VideoService {
     public VideoProxy(boolean isLoggedIn) {
         this.isLoggedIn = isLoggedIn;
     }
-
+    public VideoProxy(){}
     @Override
     public void watchVideo() {
         if (!isLoggedIn) {
@@ -13,7 +13,7 @@ public class VideoProxy implements VideoService {
             return;
         }
 
-        // Lazy init (chỉ tạo khi cần)
+        // Virtual Proxy - chỉ tạo đối tượng RealVideoService khi cần thiết
         if (realService == null) {
             realService = new RealVideoService();
         }

@@ -7,5 +7,4 @@ public class Coffee extends Beverage {
     protected void addCondiments() {
         System.out.println("Adding Sugar and Milk");
     }
-    
 }
